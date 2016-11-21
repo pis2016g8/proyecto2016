@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android1="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".QuestionActivity">
+
+    <item android1:actionLayout="@layout/activity_question"
+        android1:id="@+id/tutorialmenu"
+        android1:title="EXPLICACION"
+        app:showAsAction="always"
+        android1:icon="@mipmap/ic_lightbulb_outline_white_18dp"
+        />
+
+    <item android1:actionLayout="@layout/activity_question"
+        android1:id="@+id/helpmenu"
+        android1:title="AYUDA"
+        app:showAsAction="always"
+        android1:icon="@mipmap/ic_help_white_18dp"
+        />
+    <item android1:actionLayout="@layout/activity_question"
+        android1:id="@+id/reportmenu"
+        android1:title="REPORTAR"
+        app:showAsAction="always"
+        android1:icon="@mipmap/ic_report_problem_white_18dp"
+        />
+</menu>

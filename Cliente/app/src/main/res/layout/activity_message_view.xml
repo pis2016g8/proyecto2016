@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_message_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="calc4fun.cliente.MessageViewActivity">
+
+
+
+
+    <TextView
+        android:id="@+id/message_sender"
+        android:text="Remitente:"
+        android:paddingBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/message_date"
+        android:text="Fecha:"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message_sender"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/message_sender" />
+
+    <TextView
+        android:id="@+id/message_subject"
+        android:text="Asunto:"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/message_date"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/message_date"
+        />
+
+    <TextView
+        android:id="@+id/message_content"
+        android:text="Este es el cuerpo del mensaje"
+        android:paddingTop="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/message_subject"
+        android:textColor="@android:color/black"
+        android:background="#FFFFFFFF"
+        android:textStyle="normal|bold"
+        android:layout_above="@+id/response_button" />
+
+    <TextView
+        android:id="@+id/message_sender_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingBottom="10dp"
+        android:text="Remitente"
+        android:ems="10"
+        android:layout_above="@+id/message_date"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/message_sender"
+        android:layout_alignParentTop="true"/>
+
+    <TextView
+        android:id="@+id/message_date_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingStart="10dp"
+        android:paddingBottom="10dp"
+        android:text="Fecha"
+        android:ems="10"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/message_sender"
+        android:layout_above="@+id/message_subject"
+        android:layout_below="@+id/message_sender" />
+
+    <TextView
+        android:id="@+id/message_subject_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/message_date"
+        android:layout_below="@+id/message_date"
+        android:layout_above="@+id/message_content"
+        android:text="Asunto" />
+
+    <Button
+        android:text="Responder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/response_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="calc4fun.cliente.SendMessageActivity"
+    android:background="@drawable/fondopantalla">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/editMessageText"
+        android:hint="@string/Message"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/imageMessageView"
+        android:layout_above="@+id/CancelButton"
+        android:scrollbarAlwaysDrawVerticalTrack="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageMessageView"
+        android:background="@drawable/mensaje"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <FrameLayout
+        android:id="@+id/progress_bar"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"
+        android:alpha="0.6"
+        android:background="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:id="@+id/CancelButton"
+        android:layout_marginEnd="66dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:id="@+id/SendButton"
+        android:maxLines="1"
+        android:layout_marginEnd="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/CancelButton" />
+
+</RelativeLayout>

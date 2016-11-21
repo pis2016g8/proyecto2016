@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="calc4fun.cliente.QuestionActivity"
+    android:background="@drawable/fondopantalla">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Responder"
+        android:id="@+id/AnswerButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageQuestionView"
+        android:background="@drawable/pregunta"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Challenge"
+        android:textSize="30sp"
+        android:id="@+id/ChallengeText"
+        android:textColor="@android:color/background_light"
+        android:layout_below="@+id/imageQuestionView"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/AnswerText"
+        android:hint="@string/Answer"
+        android:textColor="@android:color/background_light"
+        android:textSize="@dimen/abc_text_size_display_1_material"
+        android:layout_above="@+id/AnswerButton"
+        android:layout_marginBottom="16dp"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/editbox_background_normal"
+        android:id="@+id/imagenProblema"
+        android:layout_below="@+id/ChallengeText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/AnswerText"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/tick"
+        android:id="@+id/tick_image"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/darthvader"
+        android:id="@+id/message_image"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+    <FrameLayout
+        android:id="@+id/progress_bar"
+        android:animateLayoutChanges="true"
+        android:visibility="gone"
+        android:alpha="0.6"
+        android:background="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+</RelativeLayout>

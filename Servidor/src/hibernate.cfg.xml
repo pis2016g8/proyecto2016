@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory >
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+     
+ 	<!-- BASE DE AZURE CRISTINA - PARA CLIENTE -->
+   		<!--
+        <property name="hibernate.connection.password">0ac04e15</property> 
+        <property name="hibernate.connection.url">jdbc:mysql://us-cdbr-azure-west-b.cleardb.com:3306/basepis8</property>
+        <property name="hibernate.connection.username">be85781dddb399</property> 
+        --> 
+        
+    <!-- BASE DE AZURE ALEJANDRO - PARA WEB -->      
+       	<!--
+        <property name="hibernate.connection.password">b2f24c6b</property> 
+        <property name="hibernate.connection.url">jdbc:mysql://us-cdbr-azure-west-b.cleardb.com:3306/pisg8</property>
+        <property name="hibernate.connection.username">bc2d74ac679b36</property>
+   		  -->
+        
+	<!-- EJEMPLO DE CONEXION PARA BASE LOCAL PARA PROBAR  -->
+   		
+     	<property name="hibernate.connection.password">admin</property> 
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/pis</property>
+        <property name="hibernate.connection.username">root</property> 
+		  	
+       
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+       
+        <mapping class="Modelo.Estadistica"/>
+     	<mapping class="Modelo.Ayuda"/>
+     	<mapping class="Modelo.Contenido"/>
+     	<mapping class="Modelo.EstadoJugador"/>
+     	<mapping class="Modelo.Jugador"/>
+     	<mapping class="Modelo.Logro"/>
+     	<mapping class="Modelo.Mensaje"/>
+     	<mapping class="Modelo.Mundo"/>
+     	<mapping class="Modelo.Nivel"/>
+     	<mapping class="Modelo.Problema"/>
+     	<mapping class="Modelo.Profesor"/>
+     	<mapping class="Modelo.Usuario"/>
+
+    </session-factory>
+</hibernate-configuration>

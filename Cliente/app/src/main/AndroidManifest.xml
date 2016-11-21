@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="calc4fun.cliente">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/yoda_sinfondo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name=".Utilities.MusicService"
+            android:enabled="true" />
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".QuestionActivity"
+            android:parentActivityName=".QuestionSelectionActivity" />
+        <activity
+            android:name=".SendMessageActivity"
+            android:parentActivityName=".QuestionActivity" />
+        <activity
+            android:name=".PerfilConEfectoActivity"
+            android:parentActivityName=".MainGo4Calcs" />
+        <activity
+            android:name=".TutorialActivity"
+            android:parentActivityName=".MainGo4Calcs" />
+        <activity
+            android:name=".ExplicacionActivity"
+            android:parentActivityName=".QuestionActivity" />
+        <activity
+            android:name=".RankingActivity"
+            android:parentActivityName=".MainGo4Calcs" />
+        <activity android:name=".MainGo4Calcs" />
+        <activity
+            android:name=".WorldLevelsActivity"
+            android:parentActivityName=".WorldsScreenSlide" />
+        <activity
+            android:name=".WorldsActivity"
+            android:parentActivityName=".MainGo4Calcs" />
+        <activity
+            android:name=".QuestionSelectionActivity"
+            android:parentActivityName=".WorldLevelsActivity" />
+        <activity
+            android:name=".MessageActivity"
+            android:label="@string/title_activity_message"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".WorldsScreenSlide"
+            android:parentActivityName=".MainGo4Calcs" />
+        <activity android:name=".MessageViewActivity" />
+        <activity android:name=".ReportActivity"
+            android:parentActivityName=".QuestionActivity"/>
+
+    </application>
+
+</manifest>

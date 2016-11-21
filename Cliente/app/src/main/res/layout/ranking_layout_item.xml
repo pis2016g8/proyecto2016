@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_ranking2"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:gravity="center"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".RankingActivity">
+
+    <ImageView
+        android:id="@+id/imageRank"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/nick"
+        android:background="@null" />
+    <TextView
+        android:id="@+id/puntos"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:text="aaaaaaaaaaaaa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textStyle="bold"
+        android:textIsSelectable="false"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:textAlignment="center" />
+    <TextView
+        android:id="@+id/nick"
+        android:textColor="@android:color/background_light"
+        android:textSize="30sp"
+        android:text="bbbbbbbbb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textStyle="bold"
+        android:textIsSelectable="false"
+        android:layout_alignBaseline="@+id/puntos"
+        android:layout_alignBottom="@+id/puntos"
+        android:layout_toStartOf="@+id/puntos"
+        android:layout_marginEnd="30dp"
+        android:textAlignment="textStart" />
+</RelativeLayout>

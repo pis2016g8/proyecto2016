@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".QuestionSelectionActivity"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- La barrita azul que esta arriba de la vista -->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/toolbar"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+            <!-- Separo el cuerpo de la activity únicamente por consistencia
+             con las otras activities. Además, permite la posibilidad de
+             acomplejizar la misma abstrayendose de la barra laateral y la toolbar-->
+            <include layout="@layout/content_question_selection"/>
+        </LinearLayout>
+
+    <!-- La vista lateral que aparece al arrastrar el
+     dedo de izquierda a derecha:
+        layout_gravity="start" indica este comportamiento
+       de estar escondido y aparecer por la izquierda-->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
+</android.support.v4.widget.DrawerLayout>
